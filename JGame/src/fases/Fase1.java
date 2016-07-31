@@ -64,15 +64,14 @@ public class Fase1 implements Runnable{
 			
 			this.back.draw();
 			this.jogador.draw();
+			this.controleJogador.mover(jogador, janela, teclado);
+			this.cliente.enviarPacote(jogador.getInstanceData().setAction(Action.MOVER));
 			
 			if(this.jogadoresOnline.size() > 0){
 				for(Jogador j : this.jogadoresOnline){
 					j.draw();
 				}
 			}
-			
-			this.controleJogador.mover(jogador, janela, teclado);
-			this.cliente.enviarPacote(jogador.getInstanceData().setAction(Action.MOVER));
 			
 			this.janela.update();
 			//this.jogador.update();

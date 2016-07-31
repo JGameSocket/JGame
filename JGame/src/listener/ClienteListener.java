@@ -34,7 +34,6 @@ public class ClienteListener extends Thread{
 			if(!data.getNome().equals(this.jogador.getNome()) && !this.cliente.existeJogador(this.jogadoresOnline, data)){
 				jogadoresOnline.add(data.getInstanceJogador());
 			}
-			
 		}
 	}	
 }
